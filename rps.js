@@ -1,39 +1,53 @@
-let arr = ["rock" , "paper" , "scissors"]
+const array = ["rock" , "paper" , "scissors"];
 
+function getComputerChoice() {
 
-function getComputerChoice(arr) {
+const randomIndex = Math.floor(Math.random() * array.length);
 
-const randomIndex = Math.floor(Math.random() * arr.length);
-
-const item = arr[randomIndex];
+const item = array[randomIndex];
 
 return item;
 }
 
 
-console.log(arr.length)
+const result = getComputerChoice();
 
-const result = getComputerChoice(arr);
 
-console.log (result);
+function playRound(playerSelectionArray, computerSelection) {
 
-function playRound(playerSelection, computerSelection) {
-
-    if (playerSelection === computerSelection) {
+    if (playerSelectionArray === computerSelection) {
         return "It's a Tie!";
-    } else if (playerSelection === "rock" && computerSelection === "paper") {
+    } else if (playerSelectionArray === "rock" && computerSelection === "paper") {
         return "Computer Wins! Paper beats Rock";
-    } else if (playerSelection === "paper" && computerSelection === "scissors") {
+    } else if (playerSelectionArray === "paper" && computerSelection === "scissors") {
         return "Computer Wins! Scissors Beats Paper";
-    } else if (playerSelection === "scissors" && computerSelection === "rock") {
+    } else if (playerSelectionArray === "scissors" && computerSelection === "rock") {
         return "Computer Wins! Rock beats Scissors";
     } else {
         return "You Win!";
     }
 }
 
-const playerSelection = "rock";
+function game() {
+ 
+    for (let i = 0; i < 5; i++) {
+        let sign = prompt("Rock, Paper or Scissors?")
+            if (sign.toLowerCase() === "rock") {
+                console.log(playerSelectionArray = "rock");
+            } else if (sign.toLowerCase() === "paper") {
+                console.log(playerSelectionArray = "paper");
+            } else if (sign.toLowerCase() === "scissors"){ 
+                console.log(playerSelectionArray = "scissors");
+            }
+        console.log(playRound(playerSelectionArray , getComputerChoice()))
+    }
+  
+}
+
+let playerSelectionArray = ["rock" , "paper" , "scissors"];
 
 const computerSelection = getComputerChoice();
 
-console.log(playRound(playerSelection, computerSelection));
+
+game();
+
