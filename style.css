@@ -1,0 +1,38 @@
+
+.score {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+#scoreboardA {
+    display: flex;
+    justify-content:center;
+    font-size: 40px;
+}
+#scoreboardB {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    
+}
+
+/* #player1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+#container {
+    display: flex;
+    align-self:center;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-top: 200px;
+}
+
+.button {
+    display: flex;
+    gap: 30px;
+}
